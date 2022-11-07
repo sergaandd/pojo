@@ -2,8 +2,8 @@ package shpp.mentor;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+//import com.fasterxml.jackson.databind.SerializationFeature;
+//import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class PojoToJson {
     static final int MAX_LETTERS = 15;
@@ -12,8 +12,8 @@ public class PojoToJson {
     }
     public static String getJson(Pojo p) {
         ObjectMapper oM = new ObjectMapper();
-        oM.registerModule(new JavaTimeModule());
-        oM.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+//        oM.registerModule(new JavaTimeModule());
+//        oM.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         try {
             return oM.writeValueAsString(p);
         } catch (JsonProcessingException e) {

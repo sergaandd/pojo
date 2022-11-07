@@ -12,9 +12,7 @@ public class App {
         Properties myProp = PropertyFileOpen.openPropertyFile();//Open property filу
         try {
             //Create ActiveMQ: connection,session,producer using data from property file
-            ActiveMQConnectionFactory myFactory = new ActiveMQConnectionFactory(myProp.getProperty("userName")
-            , myProp.getProperty("password"), myProp.getProperty("brokerURL"));
-            System.out.println(myFactory);
+            ActiveMQConnectionFactory myFactory = new ActiveMQConnectionFactory();
             Connection myConnection = myFactory.createConnection();
             myConnection.start();
 
