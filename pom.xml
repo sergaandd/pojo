@@ -95,13 +95,13 @@
       <dependency>
           <groupId>org.jetbrains</groupId>
           <artifactId>annotations</artifactId>
-          <version>RELEASE</version>
+          <version>23.0.0</version>
           <scope>compile</scope>
       </dependency>
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>RELEASE</version>
+      <version>7.6.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
