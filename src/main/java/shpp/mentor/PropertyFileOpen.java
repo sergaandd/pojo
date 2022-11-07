@@ -1,5 +1,7 @@
 package shpp.mentor;
 
+import org.apache.activemq.ActiveMQConnectionFactory;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
