@@ -9,10 +9,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class App {
 
     public static void main(String[] args) throws JMSException {
-        Properties myProp = PropertyFileOpen.openPropertyFile();//Open property filу
+        Properties myProp = PropertyFileOpen.openPropertyFile();//Open property file
         try {
-            //Create ActiveMQ: connection,session,producer using data from property file
-            ActiveMQConnectionFactory myFactory = new ActiveMQConnectionFactory();
+            //Create ActiveMQ: connection,session,producer
+            ActiveMQConnectionFactory myFactory = new ActiveMQConnectionFactory(myProp.getProperty("userName")
+                    ,myProp.getProperty("password"),myProp.getProperty("brokerURL"));
             Connection myConnection = myFactory.createConnection();
             myConnection.start();
 
