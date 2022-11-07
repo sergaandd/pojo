@@ -20,10 +20,6 @@ public class PojoToJson {
             throw new RuntimeException(e);
         }
     }
-    public static String errLogPrep(String log) {
-        return log.substring(0,log.length()-1)+"]}";
-    }
-
     public static String getName() {//Generate of random string for test
         int rndInt;
         String alph = "abcdefjhigklmnostupqrvwxyz1234567890";
