@@ -10,7 +10,6 @@ public class App {
 
     public static void main(String[] args) throws JMSException {
         Properties myProp = PropertyFileOpen.openPropertyFile();//Open property file
-        try {
             //Create ActiveMQ: connection,session,producer
             ActiveMQConnectionFactory myFactory = new ActiveMQConnectionFactory(myProp.getProperty("userName")
                     ,myProp.getProperty("password"),myProp.getProperty("brokerURL"));
@@ -31,9 +30,5 @@ public class App {
             producer.close();
             session.close();
             myConnection.close();
-        }catch(Exception e){
-            System.out.println("Something get wrong....");
-
-        }
     }
 }
